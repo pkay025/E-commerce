@@ -1,10 +1,7 @@
-import React from "react";
-import Slider from "react-slick";  
-import Image1 from "../../assets/hero/headphone.png";
-import Image2 from "../../assets/category/vr.png";
-import Image3 from "../../assets/category/macbook.png";
-
-
+import Slider from "react-slick";
+import Image1 from "../../../assets/hero/headphone.png";
+import Image2 from "../../../assets/category/vr.png";
+import Image3 from "../../../assets/category/macbook.png";
 
 const HeroData = [
     {
@@ -28,64 +25,44 @@ const HeroData = [
         title: "Branded",
         title2: "Laptops",
     },
-
 ];
 
 const Hero = () => {
     const settings = {
-        dots: false,
-        arrows: false,
+        dots: true,
         infinite: true,
-        speed: 800,
-        slidesToScroll: 1,
-        //autoplay: true,
-        autoplaySpeed: 4000,
-        cssEase: "ease-in-out",
-        pauseOnHover: false,
-        pauseOnfocus: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
     };
-    
-  return (
-   <div className="container">
-    <div className="overflow-hidden rounded-3xl min-h-[550px] 
-    sm:min-h-[650px] .hero-bg-color"
-    >
-    <div className="container pb-8 sm:pb-0">
-    {/* Hero Section */}
 
-    <Slider>{...settings}
-        {
-            HeroData.map((data) => (
-                <div key={data.id}>
-                    <div className="grid grid-cols-1 sm:grid-cols-2">
-                        {/* text content section */}
-                    <div>
-                        <h1>{data.subtitle}</h1>
-                        <h1>{data.title}</h1>
-                        <h1>{data.title2}</h1>
-                        <div>
-                        <button>Shop Now</button> 
+    return (
+        <div className="container pb-8 sm:pb-0">
+            <Slider {...settings}>
+                {HeroData.map((data) => (
+                    <div key={data.id}>
+                        <div className="grid grid-cols-1 sm:grid-cols-2">
+                            {/* text content section */}
+                            <div>
+                                <h1>{data.subtitle}</h1>
+                                <h1>{data.title}</h1>
+                                <h1>{data.title2}</h1>
+                                <div>
+                                    <button>Shop Now</button>
+                                </div>
+                            </div>
+                            {/* img section */}
+                            <div>
+                                <div>
+                                    <img src={data.img} alt={data.title} />
+                                </div>
+                            </div>
                         </div>
                     </div>
-                      {/* img section */}
-                    <div>
-                       <div>
-                            <img src={data.img} alt="" 
-                            className="w-[300px] h-[300px] sm:h-[450px]
-                            sm:scale-105 lg:scale-110 object-contain mx-auto drop" />
-                        </div> 
-                    </div>     
-            </div>
+                ))}
+            </Slider>
         </div>
-            ))
-
-        }
-    </Slider>
-    </div>
-    </div>
-   </div>
-  
-  );
+    );
 };
 
 export default Hero;
