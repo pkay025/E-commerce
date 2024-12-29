@@ -4,10 +4,24 @@ import Image2 from "../../../assets/category/gaming.png";
 import Image3 from "../../../assets/product/r-5.png"; 
 import Slider from "react-slick";
 
-const ImageList = [
-
+const ImageList = [ 
+    {
+        id: 1,
+        img: Image1,
+        title: "Up to 50% OFF for Asus Zenbook 14",
+    },
+    {
+        id: 2,
+        img: Image2,
+        title: "Up to 30% OFF for Playstation 5 pro",
+    },
+    {
+        id: 3,
+        img: Image3,
+        title: "Up to 70% OFF for Hp Pavilion 15",
+    },
  
-]
+ ];
 
 const Hero = () => {
   var settings = {
