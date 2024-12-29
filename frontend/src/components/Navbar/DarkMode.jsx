@@ -3,8 +3,6 @@ import lightmode from "../../assets/website/lightmode.png";
 import darkmode from "../../assets/website/darkmode.png";
 
 
-
-
 const DarkMode = () => {
     const [theme, setTheme] = React.useState(localStorage.getItem("theme")? localStorage.getItem("theme") :
      "light");
