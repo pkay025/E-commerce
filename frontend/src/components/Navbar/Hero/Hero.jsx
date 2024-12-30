@@ -49,7 +49,7 @@ const Hero = () => {
       {/* hero section */}
       <div className="container pb-8 sm:pb-0">
         <Slider {...settings}>
-            {ImageList.map((data) => (
+            {ImageList.map((data)> (
                 <div>
                 <div className="grid grid-cols-1 sm:grid-cols-2">
                   {/* text content section */}
@@ -77,9 +77,10 @@ const Hero = () => {
                       </div>
                   </div>
                   {/* image section */}
-                  <div className="order-1 sm:order-2">
+                 <div className="order-1 sm:order-2">
                       <div className="relative z-10">
-                      <img src={data.img} alt=""
+                      <img
+                      src={data.img} alt=""
                       className="w-[300px] h-[300px] sm:h-[450px] 
                       sm:w-[450px] sm:scale-125 lg:scale-120 
                       object-contain mx-auto"
@@ -89,7 +90,6 @@ const Hero = () => {
           </div>    
           </div>
             ))}
-        
  </Slider>
     </div>
     </div>
