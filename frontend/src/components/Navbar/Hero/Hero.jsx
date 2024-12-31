@@ -1,4 +1,3 @@
-import React from "react";
 import Image1 from "../../../assets/product/1.png";
 import Image2 from "../../../assets/category/gaming.png";
 import Image3 from "../../../assets/product/r-5.png"; 
@@ -24,6 +23,10 @@ const ImageList = [
  ];
 
 const Hero = () => {
+  const handleOrderPopup = () => {
+    // Define the function logic here
+    console.log("Order Now button clicked");
+  };
   var settings = {
     dots: false,
     arrows: false,
@@ -44,13 +47,13 @@ const Hero = () => {
     duration-200">
       {/* background pattern */}
       <div className="h-[700px] w-[700px] bg-primary/20 
-      absolute -top-1/2 right-0 rounded-3xl rotate-45 -z-10">
-      </div>
-      {/* hero section */}
+      absolute -top-1/2 right-0 rounded-3xl rotate-45 -z-10"></div>
+            {ImageList.map((data) => (
+                <div key={data.id}>
       <div className="container pb-8 sm:pb-0">
         <Slider {...settings}>
-            {ImageList.map((data)> (
-                <div>
+            {ImageList.map((data) => (
+                <div key={data.id}>
                 <div className="grid grid-cols-1 sm:grid-cols-2">
                   {/* text content section */}
                   <div className="flex flex-col justify-center gap-4 pt-12 
@@ -92,6 +95,8 @@ const Hero = () => {
             ))}
  </Slider>
     </div>
+    </div>
+    ))}
     </div>
   );
 };
