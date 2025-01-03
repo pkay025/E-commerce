@@ -84,8 +84,10 @@ const Products = () => {
             {/*Product Card*/}
             {ProductsData.map((data) => (
                     <div
+                    data-aos="fade-up"
+                    data-aos-delay= {data.aosDelay}
                     key={data.id}
-                    className="space-y-3 cursor-pointer"
+                    className="space-y-3"
                     
                     >
                      <img src={data.img} alt="" 
