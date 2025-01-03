@@ -1,6 +1,6 @@
 import Image1 from "../../../assets/product/1.png";
-import Image2 from "../../../assets/category/gaming.png";
-import Image3 from "../../../assets/product/r-5.png"; 
+import Image2 from "../../../assets/category/shopping.png";
+import Image3 from "../../../assets/category/sale.png"; 
 import Slider from "react-slick";
 
 const ImageList = [ 
@@ -8,16 +8,19 @@ const ImageList = [
         id: 1,
         img: Image1,
         title: "Up to 50% OFF for Asus Zenbook 14",
+        description: "The Asus Zenbook 14 is a powerful, compact, and feature-rich laptop for productivity, creativity, and entertainment on the go.",
     },
     {
         id: 2,
         img: Image2,
-        title: "Up to 30% OFF for Playstation 5 pro",
+        title: "Up to 30% OFF on all Men's Wear",
+        description: "Our collection of men's clothing features a wide range of stylish and versatile pieces, from formal suits to casual wear, perfect for any occasion.",
     },
     {
         id: 3,
         img: Image3,
-        title: "Up to 70% OFF for Hp Pavilion 15",
+        title: "70% OFF on all Products Sale",
+        description: "SALE ALERT! Get ready to save BIG! Order now and take advantage of our incredible deals on a wide range of products.",
     },
  
  ];
