@@ -84,6 +84,12 @@ const Hero = () => {
                   </div>
                   {/* image section */}
                  <div className="order-1 sm:order-2">
+                  <div 
+                     data-aos="zoom-in"
+                     data-aos-once="true"
+                     className="relative z-10">
+
+
                       <div className="relative z-10">
                       <img
                       src={data.img} alt=""
@@ -94,6 +100,7 @@ const Hero = () => {
                   </div>
               </div>    
           </div>    
+          </div>
           </div>
             ))}
  </Slider>
