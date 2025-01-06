@@ -1,8 +1,8 @@
 import React from "react";
-import Image1 from "../../../assets/product/p_img50.png";
-import Image2 from "../../../assets/product/shirt2.png";
-import Image3 from "../../../assets/product/p_img47.png";
-import Image4 from "../../../assets/product/p_img43.png";
+import Image1 from "../../../assets/product/shirt.png";
+import Image2 from "../../../assets/product/r-5.png";
+import Image3 from "../../../assets/product/shirt2.png";
+import Image4 from "../../../assets/product/6.png";
 
 import { FaStar } from "react-icons/fa";  
 
@@ -28,17 +28,17 @@ const ProductsData = [
     {
         id: 4,
         img: Image4,
-        title: "Kid's jeans",
-        description: "Our kid's jeans are designed to provide a comfortable and stylish fit for your little ones.",
+        title: "Casual jeans",
+        description: "Our jeans are designed to provide a comfortable and stylish fit for your loved ones.",
     },
 ]
 
 const TopProducts = () => {
   return (
     <div>
-       <div className="container">
-        {/* Header section */}
-        <div className="text-center mb-10 max-w-[600px] mx-auto">
+    <div className="container">
+    {/* Header section */}
+    <div className="text-center mb-10 max-w-[600px] mx-auto">
     <p data-aos="fade-up" className="text-sm text-secondary">
         Top Rated Products for you</p>
     <h1 data-aos="fade-up" className="text-3xl font-bold">
@@ -55,7 +55,11 @@ const TopProducts = () => {
     md:grid-cols-3 gap-20 md:gap-5 place items-center">
         {
             ProductsData.map((data) => (
-            <div>
+            <div 
+            className="rounded-3xl bg-white
+            dark:bg-gray-800 hover:bg-black/50
+            dark:hover:bg-secondary hover:text-white
+            relative shadow-xl duration-high group max-w-[300px]">
                 {/* image section */}
                
                 <div>
