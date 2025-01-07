@@ -1,6 +1,6 @@
 import React from "react";
 import Image1 from "../../../assets/category/macbook.png";
-import Image2 from "../../../assets/product/r-5.png";
+import Image2 from "../../../assets/product/h-3.png";
 import Image3 from "../../../assets/category/speaker.png";
 import Image4 from "../../../assets/product/6.png";
 import Image5 from "../../../assets/category/gaming.png";
@@ -14,13 +14,13 @@ const ProductsData = [
         id: 1,
         img: Image1,
         title: "Macbook Air",
-        description: "The Macbook Air is a powerful, compact, and feature-rich laptop for productivity, creativity, and entertainment on the go.",
+        description: "Powerful, compact, and feature-rich laptop for productivity, creativity, and entertainment on the go.",
     },
     {
         id: 2,
         img: Image2,
-        title: "Dell Pavilion 15 Notebook PC",
-        description: "The Dell Pavilion 15 is a powerful, compact, and feature-rich laptop for productivity, creativity, and entertainment on the go.",
+        title: "Dell Pavilion 15 Notebook",
+        description: "Compact, and feature-rich laptop for productivity, creativity, and many more",
     },
     {
         id: 3,
@@ -32,7 +32,7 @@ const ProductsData = [
         id: 4,
         img: Image4,
         title: "Apple Watch Series 8",
-        description: "Smart Watches for better experience.",
+        description: "Smart Watches for better timing.",
     },
     {
         id: 5,
@@ -44,7 +44,7 @@ const ProductsData = [
         id: 6,
         img: Image6,
         title: "Power Pack ",
-        description: "The Power Pack is a portable battery pack that provides you with the power you need to keep your devices running smoothly and efficiently.",
+        description: "Portable battery pack that provides you with the power you need to keep your devices running smoothly and efficiently.",
     },
 ]
 
@@ -93,7 +93,16 @@ const TopProducts = () => {
                         <FaStar className="text-yellow-500" />
                     </div>
                     <h1 className="text-xl font-bold">{data.title}</h1>
-                    <p className="text-sm text-gray-500 group-hover:text-slate-400">{data.description}</p>
+                    <p className="text-gray-500 group-hover:text-slate-400 duration-300
+                     text-sm line-clamp-2">
+                        {data.description}
+                        </p>
+                        <button 
+                        className="bg-primary hover:scale-105
+                        duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white
+                         group-hover:text-primary">
+
+                        </button>
                  </div>
             </div>
             ))}
