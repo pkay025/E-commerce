@@ -1,8 +1,11 @@
 import React from "react";
-import Image1 from "../../../assets/product/shirt.png";
+import Image1 from "../../../assets/product/shirt2.png";
 import Image2 from "../../../assets/product/r-5.png";
-import Image3 from "../../../assets/product/shirt2.png";
+import Image3 from "../../../assets/category/earphone.png";
 import Image4 from "../../../assets/product/6.png";
+import Image5 from "../../../assets/category/gaming.png";
+import Image6 from "../../../assets/product/2.png";
+
 
 import { FaStar } from "react-icons/fa";  
 
@@ -10,26 +13,38 @@ const ProductsData = [
     {
         id: 1,
         img: Image1,
-        title: "Kid's short",
-        description: "Made from super-soft and durable material",
+        title: "Designed Shirt",
+        description: "High-quality material and also comfortable and durable.",
     },
     {
         id: 2,
         img: Image2,
-        title: "Printed shirt",
-        description: "Made from high-quality material and also comfortable and durable.",
+        title: "Dell Pavilion 15",
+        description: "",
     },
     {
         id: 3,
         img: Image3,
-        title: "Stylish Hoodie trouser",
-        description: "Elevate your loungewear game with our ultra-comfortable hoodie trouser.",
+        title: "Earphone",
+        description: "",
     },
     {
         id: 4,
         img: Image4,
-        title: "Casual jeans",
-        description: "Our jeans are designed to provide a comfortable and stylish fit for your loved ones.",
+        title: "Smart Watches",
+        description: "",
+    },
+    {
+        id: 5,
+        img: Image5,
+        title: "Play Station 4 slim",
+        description: "",
+    },
+    {
+        id: 6,
+        img: Image6,
+        title: "Power Pack ",
+        description: "",
     },
 ]
 
@@ -63,7 +78,9 @@ const TopProducts = () => {
                 {/* image section */}
                
                 <div>
-                    <img src={data.img} alt="" />
+                    <img src={data.img} alt="" 
+                    className="max-w-[140px] block mx-auto
+                    transform -translate-y-5 group-hover:scale-110"/>
                 </div>
                  {/* details section */}
             </div>
