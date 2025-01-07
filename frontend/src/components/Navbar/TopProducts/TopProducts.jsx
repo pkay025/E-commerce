@@ -1,7 +1,7 @@
 import React from "react";
-import Image1 from "../../../assets/product/shirt2.png";
+import Image1 from "../../../assets/category/macbook.png";
 import Image2 from "../../../assets/product/r-5.png";
-import Image3 from "../../../assets/category/earphone.png";
+import Image3 from "../../../assets/category/speaker.png";
 import Image4 from "../../../assets/product/6.png";
 import Image5 from "../../../assets/category/gaming.png";
 import Image6 from "../../../assets/product/2.png";
@@ -13,38 +13,38 @@ const ProductsData = [
     {
         id: 1,
         img: Image1,
-        title: "Designed Shirt",
-        description: "High-quality material and also comfortable and durable.",
+        title: "Macbook Air",
+        description: "The Macbook Air is a powerful, compact, and feature-rich laptop for productivity, creativity, and entertainment on the go.",
     },
     {
         id: 2,
         img: Image2,
-        title: "Dell Pavilion 15",
-        description: "",
+        title: "Dell Pavilion 15 Notebook PC",
+        description: "The Dell Pavilion 15 is a powerful, compact, and feature-rich laptop for productivity, creativity, and entertainment on the go.",
     },
     {
         id: 3,
         img: Image3,
-        title: "Earphone",
-        description: "",
+        title: "Bluetooth Speaker",
+        description: "Speaker for better sound experience.",
     },
     {
         id: 4,
         img: Image4,
-        title: "Smart Watches",
-        description: "",
+        title: "Apple Watch Series 8",
+        description: "Smart Watches for better experience.",
     },
     {
         id: 5,
         img: Image5,
         title: "Play Station 4 slim",
-        description: "",
+        description: "Gaming console for entertainment and fun.",
     },
     {
         id: 6,
         img: Image6,
         title: "Power Pack ",
-        description: "",
+        description: "The Power Pack is a portable battery pack that provides you with the power you need to keep your devices running smoothly and efficiently.",
     },
 ]
 
@@ -80,9 +80,21 @@ const TopProducts = () => {
                 <div>
                     <img src={data.img} alt="" 
                     className="max-w-[140px] block mx-auto
-                    transform -translate-y-5 group-hover:scale-110"/>
+                    transform -translate-y-5 group-hover:scale-110 duration-200"/>
                 </div>
                  {/* details section */}
+                 <div className="p-4 text-center">
+                    {/* Star rating section */}
+                    <div className="w-full flex items-center justify-center
+                    gap-1">
+                        <FaStar className="text-yellow-500" />
+                        <FaStar className="text-yellow-500" />
+                        <FaStar className="text-yellow-500" />
+                        <FaStar className="text-yellow-500" />
+                    </div>
+                    <h1 className="text-xl font-bold">{data.title}</h1>
+                    <p className="text-sm text-gray-500 group-hover:text-slate-400">{data.description}</p>
+                 </div>
             </div>
             ))}
         </div>
