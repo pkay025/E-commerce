@@ -5,14 +5,18 @@ import Image3 from "../../../assets/product/p-3.jpg";
 import Image4 from "../../../assets/product/p_img21.png";
 import Image5 from "../../../assets/product/p_img14.png";
 import Image6 from "../../../assets/product/p_img27.png";
+import Image7 from "../../../assets/product/Wireless Charger.png";
+import Image8 from "../../../assets/product/Iphones.png";
+import Image9 from "../../../assets/product/JBL Wireless Speaker.png";
+import Image10 from "../../../assets/product/5.png";
 import { FaStar } from "react-icons/fa";
 
 const ProductsData = [
     {
         id: 1,
         img: Image1,
-        title: "Apple Watch",
-        rating: 6.5,
+        title: "Apple Series 6 Watch",
+        rating: 7.5,
         color: "Aqua",
         aosDelay: "0",
     },
@@ -57,6 +61,38 @@ const ProductsData = [
         rating: 9.3,
         color: "Gray",
         aosDelay: "1000",
+    },
+    {
+        id: 7,
+        img: Image7,
+        title: "Apple Wireless charger",
+        rating: 8.5,
+        color: "Black",
+        aosDelay: "1200",
+    },
+    {
+        id: 8,
+        img: Image8,
+        title: "Iphone X",
+        rating: 9.6,
+        color: "Black & White",
+        aosDelay: "1400",
+    },
+    {
+        id: 9,
+        img: Image9,
+        title: "JBL Wireless Speaker",
+        rating: 9.8,
+        color: "Black",
+        aosDelay: "1600",
+    },
+    {
+        id: 10,
+        img: Image10,
+        title: "Phone Cases",
+        rating: 9.5,
+        color: "Gray",
+        aosDelay: "1800",
     },
     
 ]

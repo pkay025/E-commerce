@@ -1,9 +1,12 @@
 import React from "react";
 import Image1 from "../../../assets/category/macbook.png";
 import Image2 from "../../../assets/product/h-3.png";
-import Image3 from "../../../assets/category/speaker.png";
-import Image4 from "../../../assets/product/6.png";
+import Image3 from "../../../assets/product/11.png";
+import Image4 from "../../../assets/product/Series 8.png";
 import Image5 from "../../../assets/category/gaming.png";
+import Image7 from "../../../assets/product/PD.png";
+import Image8 from "../../../assets/product/JBL headset.png";
+import Image9 from "../../../assets/product/Network C6 Cables.png";
 import Image6 from "../../../assets/product/2.png";
 
 
@@ -25,7 +28,7 @@ const ProductsData = [
     {
         id: 3,
         img: Image3,
-        title: "Bluetooth Speaker",
+        title: "JBL Bluetooth Speaker",
         description: "Speaker for better sound experience.",
     },
     {
@@ -46,6 +49,24 @@ const ProductsData = [
         title: "Power Pack ",
         description: "Portable battery pack that provides you with the power you need to keep your devices running smoothly and efficiently.",
     },
+    {
+        id: 7,
+        img: Image7,
+        title: "Sandisk flashdrive",
+        description: "Portable flash drive for data storage and transfer.",
+    },
+    {
+        id: 8,
+        img: Image8,
+        title: "JBL Wireless headphone",
+        description: "Wireless headphone for quality sound experience.",
+    },
+    {
+        id: 9,
+        img: Image9,
+        title: "Network Category 6 Cable", 
+        description: "Category 6 Cable for high-speed data transfer and connectivity.",
+    }
 ]
 
 const TopProducts = () => {
@@ -71,6 +92,7 @@ const TopProducts = () => {
         {
             ProductsData.map((data) => (
             <div 
+            data-aos="zoom-in" 
             className="rounded-3xl bg-white
             dark:bg-gray-800 hover:bg-black/50
             dark:hover:bg-secondary hover:text-white
@@ -98,10 +120,10 @@ const TopProducts = () => {
                         {data.description}
                         </p>
                         <button 
-                        className="bg-primary hover:scale-105
+                        className="bg-secondary hover:scale-105
                         duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white
-                         group-hover:text-primary">
-
+                         group-hover:text-secondary group-hover:border-2 group-hover:border-secondary">
+                            Order Now
                         </button>
                  </div>
             </div>
