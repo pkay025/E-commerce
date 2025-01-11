@@ -7,6 +7,8 @@ import "aos/dist/aos.css";
 import TopProducts from "./components/Navbar/TopProducts/TopProducts";
 import Banner from "./components/Navbar/Banner/Banner";
 import Subscribe from "./components/Subscribe/Subscribe";
+import Footer from "./components/Footer/Footer";
+
 
 
 
@@ -30,6 +32,8 @@ const App = () => {
       <TopProducts />
       <Banner />
       <Subscribe />
+      <Footer />
+      
       
     </div>
   );
