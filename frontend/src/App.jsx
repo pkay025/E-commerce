@@ -12,6 +12,7 @@ import Footer from "./components/Footer/Footer";
 
 
 
+
 const App = () => {
     
   React.useEffect(() => { 
@@ -25,14 +26,18 @@ const App = () => {
 }, []);
   
   return (
-    <div>
-      <Navbar />
+    <div className="bg-white dark:bg-gray-900 dark:text-white
+    durartion-200">
+      <Navbar handleOrderPopup={setOrderPopup} />
       <Hero />
       <Products />
       <TopProducts />
       <Banner />
       <Subscribe />
       <Footer />
+      <Popup orderPopup={orderPopup} 
+      setOrderPopup={setOrderPopup} />
+      
       
       
     </div>

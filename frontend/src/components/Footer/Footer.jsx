@@ -2,10 +2,13 @@ import React from "react";
 import Banner from "../../assets/product/footer-pattern.jpg";
 import footerLogo from "../../assets/logo.png";
 
-
-
-
-
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaLocationArrow,
+  FaMobileAlt,
+} from "react-icons/fa";
 
 const BannerImg = {
   backgroundImage: `url(${Banner})`,
@@ -45,7 +48,9 @@ const Footer = () => {
     <div style={BannerImg}
     className="text-white mb-20">
       <div className="container">
-        <div className="grid md:grid-cols-3 pv-45 pt-5">
+        <div 
+        data-aos="zoom-in"
+        className="grid md:grid-cols-3 pb-45 pt-5">
           {/*Company details*/}
           <div className="py-8 px-4">
             <h1
@@ -60,12 +65,7 @@ const Footer = () => {
             <p>An innovative e-commerce
             platform designed to offer a
             curated selection of unique, 
-            high-quality products and services. Specializing in exclusive items
-            that cater to diverse tastes, UniQ provides a seamless shopping 
-            experience for customers seeking originality and individuality. 
-            With an intuitive user interface, secure payment options, and personalized 
-            recommendations, UniQ stands out as the go-to destination for shoppers looking to express their unique style 
-            or discover one-of-a-kind treasures.</p>
+            high-quality products and services.</p>
           </div>
           {/*Footer Links */}
           <div className="grid grid-cols-2 sm:grid-cols-3
@@ -77,17 +77,74 @@ const Footer = () => {
                 sm:text-left text-justify mb-3">
                   Important Links
                   </h1>
-                  <ul>
+                  <ul className="flex flex-col gap-3">
                     {
-                      FooterLinks.map((data) => (
-                        <li key={data.title}>
-                          <a href={data.link} className="hover:text-secondary duration-200">
-                            {data.title}
-                          </a>
+                      FooterLinks.map((link) => (
+                        <li 
+                        className="cursor-pointer
+                        hover:text-secondary hover:translate-x-1duration-300
+                        text-gray-200"
+                        key={link.title}>
+
+                          <span>{link.title}</span>
+                        
                         </li>
                       ))
                     }
                   </ul>
+              </div>
+            </div>
+
+
+            <div>
+              <div className="py-8 px-4">
+                <h1
+                className="sm:text-2xl text-xl font-bold
+                sm:text-left text-justify mb-3">
+                  Quick Links
+                  </h1>
+                  <ul className="flex flex-col gap-3">
+                    {
+                      FooterLinks.map((data) => (
+                        <li 
+                        className="cursor-pointer
+                        hover:text-secondary hover:translate-x-1 duration-300
+                        text-gray-200"
+                        key={data.title}>
+
+                          <span>{data.title}</span>
+                          
+                          
+                        </li>
+                      ))
+                    }
+                  </ul>
+              </div>
+            </div>
+            {/* Socail link */}
+
+            <div>
+              <div className="flex items-center gap-3 mt-6">
+                <a href="#">
+                <FaInstagram className="text-3xl" />
+                </a>
+                <a href="#">
+                  <FaFacebook className="text-3xl" />
+                </a> 
+                 <a href="#">
+                  <FaLinkedin className="text-3xl" />
+                </a>
+              </div>
+              <div className="mt-6">
+                <div className="flex items-center gap-3"    >
+                <FaLocationArrow />
+                <p>University Of Ghana, Legon</p>
+                </div>
+                <div className="flex items-center gap-3">
+                <FaMobileAlt />
+                  <p>+233 257 676 119</p>
+                </div>
+
               </div>
             </div>
           </div>
